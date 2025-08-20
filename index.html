@@ -1,50 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title"
-      content="Confraternização Kennen" />
-    <meta property="og:description"
-      content="Você é nosso convidado especial! Confira o convite no link abaixo." />
-    
-      <meta property="og:image"
-      content="alcidesfh.github.io/confraternizacao_kenne/preview.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:url"
-      content="https://alcidesfh.github.io/confraternizacao_kenne/" />
-    <meta property="og:type" content="website" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convite de Casamento - Alcides e Andreza</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .form-container {
+      display: none;
+      margin-top: 20px;
+    }
 
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    .btn-revelar {
+      padding: 12px 24px;
+      background-color: #8b5e3c;
+      color: white;
+      /* border: none;*/
+      border: 1px solid #f1efec;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      
+    }
 
-    <title>Confraternização Kennen</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="container">
-      <img class="imagem-fundo" src="image2.jpg" alt="Confraternização Kennen">
-      <h2><span class="titulo">Confirme sua presença!</span></h2>
-      <form id="formConfirmacao">
-        <input type="text" id="nome" placeholder="Seu nome completo" required>
-        <!--input type="tel" id="telefone"
-          placeholder="DDD + número (somente números)" required-->
-        <button id="btnMostrarForm" class="btn-revelar">Confirmar
-          Presença</button>
-        <button id="btnMostrarlocalizacao" class="btn-revelar" type="button">
-          <i class="fa-solid fa-map-location-dot fa-2x "></i>
-          <span class="btn-texto">Localização</span>
-        </button>
-        <script>
-            document.getElementById("btnMostrarlocalizacao").addEventListener("click", function () {
-            window.open("https://waze.com/ul/h6gyd7jpst ","_blank");
-           });
-      </script>
-      </form>
-      <p id="mensagemConfirmacao" class="confirmado"></p>
+    .btn-revelar:hover {
+      background-color: #64422e;
+      
+
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="Imagem6.jpg" alt="Convite de Casamento" class="imagem-fundo">
+
+    <!-- Botão que revela o formulário -->
+    <button id="btnMostrarForm" class="btn-revelar">Confirmar Presença</button>
+
+    <!-- Google Forms inicialmente oculto -->
+    <div class="form-container" id="formContainer">
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSddU7KEE0VZJd8wp8v3qzqW_rrlS86bFEQXWkFs_obYEx759g/viewform?embedded=true" 
+        width="100%" 
+        height="700" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0">
+        Carregando…
+      </iframe>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+
+  <script>
+    document.getElementById("btnMostrarForm").addEventListener("click", function () {
+      document.getElementById("formContainer").style.display = "block";
+      this.style.display = "none"; // Oculta o botão após clique
+    });
+  </script>
+</body>
 </html>

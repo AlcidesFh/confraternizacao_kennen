@@ -43,7 +43,7 @@
         const nome = document.getElementById("nome").value;
 
         // ⚠️ Troque o entry.123456789 pelo ID do campo "Nome" do seu Google Forms
-        const url = "https://docs.google.com/forms/d/e/1FAIpQLSddU7KEE0VZJd8wp8v3qzqW_rrlS86bFEQXWkFs_obYEx759g/viewform?usp=pp_url&id="nome"=" + encodeURIComponent(nome);
+        const url = "<iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSddU7KEE0VZJd8wp8v3qzqW_rrlS86bFEQXWkFs_obYEx759g/viewform?embedded=true\" width=\"640\" height=\"1239\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Carregando…</iframe>=" + encodeURIComponent(nome);
 
         window.open(url, "_blank");
       }

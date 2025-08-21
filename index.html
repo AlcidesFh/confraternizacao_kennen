@@ -43,7 +43,7 @@
         const nome = document.getElementById("nome").value;
 
         // ⚠️ Troque o entry.123456789 pelo ID do campo "Nome" do seu Google Forms
-        const url = "https://docs.google.com/forms/d/e/1FAIpQLSddU7KEE0VZJd8wp8v3qzqW_rrlS86bFEQXWkFs_obYEx759g/viewform?usp=pp_url&entry.1103372396=Alcides&entry.1103372396=Bianca&entry.1103372396=Carol&entry.1103372396=Fabiola&entry.1103372396=Guilherme&entry.1103372396=Gusta&entry.1103372396=Luis&entry.1103372396=Paula&entry.1103372396=Pedro&entry.1103372396=Richard&entry.1103372396=Rosa&entry.1103372396=Rosangela&entry.1103372396=Vagner&entry.1103372396=well&entry.1103372396=Alene&entry.1103372396=Bia&entry.1103372396=Caio&entry.1103372396=Cicero&entry.1103372396=Miqueias&entry.1103372396=Sabrina+Agnez&entry.1103372396=Sabrina+lira&entry.1103372396=Jo%C3%A3o&entry.1103372396=Wesley&entry.1103372396=Jo%C3%A3o+Rosa=" + encodeURIComponent(nome);
+        const url = "https://docs.google.com/forms/d/e/1FAIpQLSddU7KEE0VZJd8wp8v3qzqW_rrlS86bFEQXWkFs_obYEx759g/viewform?usp=pp_url&id="nome"=" + encodeURIComponent(nome);
 
         window.open(url, "_blank");
       }
